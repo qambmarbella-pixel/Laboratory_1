@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div class="main-container">
+       
+        <h1 class="app-title">📝 Task Manager</h1>
+        
+        <div class="input-group">
+            <input type="text" id="taskInput" class="form-control" placeholder="Enter a new task...">
+            <button id="addBtn" class="btn">Add Task</button>
+        </div>
+
+        <div class="filter-section text-center">
+            <button class="btn filter-btn active" data-filter="all">All</button>
+            <button class="btn filter-btn" data-filter="active">Active</button>
+            <button class="btn filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="stats-card">
+            <div class="row">
+                <div class="col-4 stat-item">
+                    <div class="stat-number" id="totalTasks">0</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+                <div class="col-4 stat-item">
+                    <div class="stat-number" id="activeTasks">0</div>
+                    <div class="stat-label">Active</div>
+                </div>
+                <div class="col-4 stat-item">
+                    <div class="stat-number" id="completedTasks">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+            </div>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
